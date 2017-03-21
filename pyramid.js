@@ -1,17 +1,14 @@
-bricks = document.getElementById("bricks").value;
-height = document.getElementById("height").value;
+brickInput = document.getElementById("bricks");
+heightInput = document.getElementById("height");
 
-brickInput = document.getElementById("bricks")
-heightInput = document.getElementById("height")
+brickInput.addEventListener("change", drawPyramid);
+heightInput.addEventListener("input", drawPyramid); 
 
-brickInput.addEventListener("click", drawPyramid);
-heightInput.addEventListener("click", drawPyramid); 
-
-function drawPyramid(height, bricks) {
-
+function drawPyramid() {
+    bricks = brickInput.value;
+    height = heightInput.value;
     // first, clear the old content
     document.getElementById("pyramid").innerHTML = "";
-    console.log(height, bricks);
     // for each row....
     for (var row = 0; row < height; row++) {
 
@@ -33,5 +30,7 @@ function drawPyramid(height, bricks) {
         rowElem = document.createElement("p");
         rowElem.innerHTML = rowStr;
         document.getElementById("pyramid").appendChild(rowElem);
+        document.getElementById("rangeNumber").innerHTML = height
     }
 }
+
