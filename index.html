@@ -31,7 +31,18 @@
             background: #eeeeee;
             color: #b64187;
             text-align: right
-            
+        }
+        
+        #pyramid {
+            display: table;
+            margin: 0 auto;
+        }
+        
+        #pyramidcontainer {
+            width: 70%;
+            margin: 0 auto;
+            background: #cccccc; 
+        }
     </style>
 </head>
 <body>
@@ -55,10 +66,12 @@
                 <label>
                 How High?
             </label>
-                <input id="height" type="range"  min="0" max="10"/>
+                <input id="height" type="range"  min="0" max="20"/>
                 <div id="rangeNumber"></div>
             </div>
+                <div id="pyramidcontainer">
             <div id="pyramid"></div>
+                </div>
             </form>
             </div>
 
